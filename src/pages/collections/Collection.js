@@ -28,7 +28,7 @@ const Collections = () => {
 
     if (isLoading) {
 
-        return <>Loading...</>
+        return <div className="text-center">Loading...</div>
     }
 
     return (

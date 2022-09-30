@@ -1,7 +1,7 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: Helvetica;
   src: url(../assets/fonts/Helvetica.ttc);
@@ -10,6 +10,8 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
+
   font-family: Helvetica, 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,4 +21,101 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.logo {
+  position: relative;
+  top: -10px;
+}
+
+.product-holder {
+  pointer-events: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  height: 100%;
+  z-index: -1;
+}
+
+.product-holder-individual {
+  pointer-events: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  width: 50rem;
+  z-index: -1;
+}
+
+.product-holder-mobile {
+  pointer-events: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 10;
+  text-align: center;
+  z-index: -1;
+}
+
+
+.image-container {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.crossed {
+  background:
+    linear-gradient(to top left,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) calc(50% - 0.8px),
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) calc(50% + 0.8px),
+      rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to top right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) calc(50% - 0.8px),
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) calc(50% + 0.8px),
+      rgba(0, 0, 0, 0) 100%);
+}
+
+#myVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.shopnow {
+  z-index: 99;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 100px;
+  /* Negative half of height. */
+  margin-left: -70px;
+  color: #f1f1f1;
+  width: 140px;
 }
